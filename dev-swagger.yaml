@@ -3,7 +3,7 @@ swagger: "2.0"
 info:
   description: "MySugr MicroService REST Service"
   version: "1.0.0"
-  title: "MySugr MicroService API"
+  title: "Test MicroService API"
 host: "3062df15aa.execute-api.eu-west-1.amazonaws.com"
 basePath: "/dev"
 schemes:
