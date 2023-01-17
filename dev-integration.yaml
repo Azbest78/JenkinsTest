@@ -1,6 +1,6 @@
 host: "3062df15aa.execute-api.eu-west-1.amazonaws.com"
 basePath: "/dev"
-paths:
+paths: 
   /test/api/v1/active/:
     post:
       x-amazon-apigateway-integration:
