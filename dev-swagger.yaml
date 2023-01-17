@@ -17,7 +17,7 @@ paths:
         "200":
           description: "200 response"
           schema:
-            $ref: "#/definitions/Entitlements"
+            $ref: "#/definitions/Entitlements" 
   /cmi-integration/api/v1/active-users/:
     post:
       operationId: "postActiveUsersUsingPOST"
