@@ -1,8 +1,8 @@
 ---
 swagger: "2.0"
 info:
-  version: "1.0.0"
-  title: "Test MicroService API"
+  version: "2.0.0"
+  title: "Test MicroService API ver 2.0"
 host: "3062df15aa.execute-api.eu-west-1.amazonaws.com"
 basePath: "/dev"
 schemes:
