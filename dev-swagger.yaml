@@ -9,7 +9,7 @@ basePath: "/dev"
 schemes:
 - "https"
 paths:
-/test/api/v1/active/:
+  /test/api/v1/active/:
     get:
       produces:
       - "application/json"
@@ -18,7 +18,7 @@ paths:
           description: "200 response"
           schema:
             $ref: "#/definitions/Entitlements"
-/cmi-integration/api/v1/active-users/:
+  /cmi-integration/api/v1/active-users/:
     post:
       operationId: "postActiveUsersUsingPOST"
       parameters:
