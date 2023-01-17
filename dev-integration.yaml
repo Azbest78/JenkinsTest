@@ -1,7 +1,7 @@
 host: "3062df15aa.execute-api.eu-west-1.amazonaws.com"
 basePath: "/dev"
 paths:
-  /cmi-integration/api/v1/active-users/{solution}:
+  /test/api/v1/active/:
     post:
       x-amazon-apigateway-integration:
         type: "aws"
