@@ -17,6 +17,8 @@ paths:
           description: "200 response"
           schema:
             $ref: "#/definitions/Empty"
+      security:
+      - anyName: []
 securityDefinitions:
   anyName:
     type: "apiKey"
