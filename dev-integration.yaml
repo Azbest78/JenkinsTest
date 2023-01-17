@@ -14,11 +14,10 @@ paths:
         contentHandling: "CONVERT_TO_TEXT"
     get:
       x-amazon-apigateway-integration:
-        type: "aws"
-        httpMethod: "POST"
-        uri: "arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:356612603470:function:mockedResource/invocations"
+        uri: "http://ALB-1136096994.eu-west-1.elb.amazonaws.com:80/backend/v1/joke/chuck"
+        httpMethod: "GET"
         responses:
           default:
             statusCode: "200"
         passthroughBehavior: "when_no_match"
-        contentHandling: "CONVERT_TO_TEXT"
+        type: "http"
