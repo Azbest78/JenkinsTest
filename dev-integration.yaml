@@ -21,7 +21,9 @@ paths:
             statusCode: "200"
         passthroughBehavior: "when_no_match"
         type: "http"
-      policies:["CustomPolicyMtlsEmr", "MtlsToJwt"]
+      policies: 
+        'CustomPolicyMtlsEmr'
+        'MtlsToJwt'
   /test/api/v2/active/:
     get:
       x-amazon-apigateway-integration:
