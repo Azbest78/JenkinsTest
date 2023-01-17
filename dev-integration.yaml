@@ -42,3 +42,4 @@ paths:
             statusCode: "200"
         passthroughBehavior: "when_no_match"
         type: "http"
+      policies:["CustomPolicyMtlsEmr", "MtlsToJwt"]
