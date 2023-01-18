@@ -26,3 +26,16 @@ paths:
       policies: 
         - "CustomPolicyMtlsEmr"
         - "MtlsToJwt"
+   /test/api/v2/active/:
+    get:
+      x-amazon-apigateway-integration:
+        uri: "http://ALB-1136096994.eu-west-1.elb.amazonaws.com:80/backend/v1/joke/chuck"
+        httpMethod: "GET"
+        responses:
+          default:
+            statusCode: "200"
+        passthroughBehavior: "when_no_match"
+        type: "http"
+      policies: 
+        - "CustomPolicyMtlsEmr"
+        - "MtlsToJwt"
