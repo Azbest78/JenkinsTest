@@ -2,18 +2,6 @@ host: "3062df15aa.execute-api.eu-west-1.amazonaws.com"
 basePath: "/dev"
 paths: 
   /test/api/v1/active/:
-    post:
-      x-amazon-apigateway-integration:
-        type: "aws"
-        httpMethod: "POST"
-        uri: "http://ALB-1136096994.eu-west-1.elb.amazonaws.com:80/backend/v1/quote"
-        responses:
-          default:
-            statusCode: "200"
-        passthroughBehavior: "when_no_match"
-      policies:
-        - "CustomPolicyMtlsEmr"
-        - "MtlsToJwt"
     get:
       x-amazon-apigateway-integration:
         uri: "http://ALB-1136096994.eu-west-1.elb.amazonaws.com:80/backend/v1/quote"
