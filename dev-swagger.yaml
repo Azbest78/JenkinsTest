@@ -17,7 +17,7 @@ paths:
           description: "200 response"
           schema:
             $ref: "#/definitions/Empty"
-      ksecurity:
+      security:
       - anyName: []
   /test/api/v2/active/:
     get:
@@ -28,7 +28,7 @@ paths:
           description: "200 response"
           schema:
             $ref: "#/definitions/Empty"
-      ksecurity:
+      security:
       - anyName: []
 securityDefinitions:
   anyName:
