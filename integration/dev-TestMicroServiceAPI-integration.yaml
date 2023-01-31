@@ -14,6 +14,8 @@ paths:
       policies: 
         - "CustomPolicyMtlsEmr"
         - "MtlsToJwt"
+        - "EnforceClientId"
+        - "ClientIdToApiManagerJwt"
   /test/api/v2/active/:
     get:
       x-amazon-apigateway-integration:
