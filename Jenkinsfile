@@ -114,7 +114,7 @@ pipeline {
     stages {
         stage('checkin API swaggerPaths') {
             steps {
-                git branch: 'main', credentialsId: 'jenkins2', url: 'https://github.com/Azbest78/JenkinsTest'
+                git branch: 'main', url: 'https://github.com/Azbest78/JenkinsTest'
                 script {
                     env.filename_api_var = sh(label: 'Retrieve changed file',  script: 'git diff --name-only HEAD^ HEAD', returnStdout: true ).trim()
                     //  env.filename_api_var.endsWith("-swagger.yaml")
