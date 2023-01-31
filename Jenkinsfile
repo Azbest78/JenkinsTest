@@ -141,7 +141,7 @@ pipeline {
             steps {
                 script {
                     def paths = intersectPaths(swaggerPaths, integrationPaths)
-                    def combinedPath = combinePaths(paths, "dev-swagger.yaml", "dev-integration.yaml")
+                    def combinedPath = combinePaths(paths, "swagger/dev-TestMicroServiceAPI-swagger.yaml", "integration/dev-TestMicroServiceAPI-integration.yaml")
                     yaml = writeYaml returnText: true, data: combinedPath
                 }
             }
@@ -205,7 +205,7 @@ pipeline {
 							intersectPath.value.each{ pathValue -> O:{
 								def methodAction = [:]
 								def confMethod
-								def policiesInIntegration = findPoliciesInFile('dev-integration.yaml', intersectPath.key, pathValue).sort()
+								def policiesInIntegration = findPoliciesInFile('integration/dev-TestMicroServiceAPI-integration.yaml', intersectPath.key, pathValue).sort()
 									
 								if(confEndpoint != null) {
 								    confMethod = confEndpoint.methods.find{method -> method.name == pathValue.toUpperCase()}
