@@ -119,8 +119,8 @@ pipeline {
                     env.filename_api_var = sh(label: 'Retrieve changed file',  script: 'git diff --name-only HEAD^ HEAD', returnStdout: true ).trim()
                     //  env.filename_api_var.endsWith("-swagger.yaml")
                     println env.filename_api_var
-                    env.api_var = findApiNameinFile("swagger/dev-TestMicroServiceAPI-swagger.yaml")
-                    def paths = findPathsinFile("swagger/dev-TestMicroServiceAPI-swagger.yaml")
+                    env.api_var = findApiNameinFile("public/dev-TestMicroServiceAPI-swagger.yaml")
+                    def paths = findPathsinFile("public/dev-TestMicroServiceAPI-swagger.yaml")
                     paths.each {path -> findEndpointsInPath2(path).each {endpoint -> swaggerPaths.add(endpoint)}}
                     swaggerPaths.each {endpoint -> println endpoint.value + ' ' + endpoint.key}
                 }
@@ -141,7 +141,7 @@ pipeline {
             steps {
                 script {
                     def paths = intersectPaths(swaggerPaths, integrationPaths)
-                    def combinedPath = combinePaths(paths, "swagger/dev-TestMicroServiceAPI-swagger.yaml", "integration/dev-TestMicroServiceAPI-integration.yaml")
+                    def combinedPath = combinePaths(paths, "public/dev-TestMicroServiceAPI-swagger.yaml", "integration/dev-TestMicroServiceAPI-integration.yaml")
                     yaml = writeYaml returnText: true, data: combinedPath
                 }
             }
