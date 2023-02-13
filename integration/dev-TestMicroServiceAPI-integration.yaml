@@ -4,7 +4,7 @@ paths:
   /test/api/v1/active/:
     get:
       x-amazon-apigateway-integration:
-        uri: "http://ALB-1136096994.eu-west-1.elb.amazonaws.com:80/backend/v1/joke/chuck"
+        uri: "http://ALB-1136096994.eu-west-1.elb.amazonaws.com:80/backend/v1/joke/quote"
         httpMethod: "GET"
         responses:
           default:
@@ -15,3 +15,4 @@ paths:
         - "CustomPolicyMtlsEmr"
         - "MtlsToJwt"
         - "EnforceClientId"
+        - "ClientIdToApiManagerJwt"
