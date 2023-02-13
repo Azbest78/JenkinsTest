@@ -19,7 +19,17 @@ paths:
             $ref: "#/definitions/Empty"
       security:
       - anyName: []
-
+  /test/api/v2/active/:
+    get:
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+      security:
+      - anyName: []
 securityDefinitions:
   anyName:
     type: "apiKey"
