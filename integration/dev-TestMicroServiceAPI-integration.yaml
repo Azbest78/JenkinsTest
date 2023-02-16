@@ -27,7 +27,5 @@ paths:
         passthroughBehavior: "when_no_match"
         type: "http"
       policies: 
-        - "CustomPolicyMtlsEmr"
-        - "MtlsToJwt"
-        - "EnforceClientId"
-        - "ClientIdToApiManagerJwt"
+        - "CustomTestPolicy"
+        
